@@ -21,6 +21,10 @@ describe("closestToZero", () => {
     expect(closestToZero([2, 0])).toBe(0);
   });
 
+  test("when input is [2, 0], it must returns 0, as 0 is ... the closest number to 0", () => {
+    expect(closestToZero([0, 2])).toBe(0);
+  });
+
   test("Input must be an array", () => {
     expect(() => {
       closestToZero("not an array");

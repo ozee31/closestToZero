@@ -6,7 +6,7 @@ module.exports = input => {
   return input
     .filter(value => typeof value === "number")
     .reduce((closestToZero, currentNumber) => {
-      if (!closestToZero) {
+      if (closestToZero === null) {
         return currentNumber;
       }
 
@@ -20,5 +20,5 @@ module.exports = input => {
       return currentNumberAbs < closestToZeroAbs
         ? currentNumber
         : closestToZero;
-    });
+    }, null);
 };
